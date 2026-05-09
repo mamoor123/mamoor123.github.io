@@ -311,7 +311,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.125rem;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
 }
 .theme-toggle:hover {
   border-color: var(--accent);
@@ -331,7 +331,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
   border: none;
   line-height: 1.5;
 }
@@ -388,7 +388,7 @@ body {
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: all var(--transition);
+  transition: transform var(--transition), opacity var(--transition);
 }
 .nav__hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -667,7 +667,7 @@ body {
   border-radius: var(--radius-sm);
   padding: 20px 16px;
   text-align: center;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .about__stat:hover {
   border-color: var(--accent);
@@ -711,7 +711,7 @@ body {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: border-color var(--transition), background var(--transition);
 }
 .tech-item:hover {
   border-color: var(--accent);
@@ -755,7 +755,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -830,7 +830,7 @@ body {
   padding: 4px 12px;
   border-radius: 100px;
   border: 1px solid transparent;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast);
 }
 .tag:hover {
   border-color: var(--accent);
@@ -880,7 +880,7 @@ body {
   padding: 12px 28px;
   border: 1px solid var(--accent);
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: background var(--transition), gap var(--transition);
 }
 .view-all__link:hover {
   background: var(--accent-dim);
@@ -898,7 +898,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   position: relative;
   overflow: hidden;
 }
@@ -1017,7 +1017,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   position: relative;
 }
 .testimonial-card:hover {
@@ -1093,7 +1093,7 @@ body {
   padding: 12px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
 .contact__link:hover {
   border-color: var(--accent);
@@ -1127,7 +1127,7 @@ body {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 1.125rem;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
 }
 .contact__social a:hover {
   border-color: var(--accent);
@@ -1304,7 +1304,7 @@ body {
   border-radius: 100px;
   padding: 6px 16px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
   white-space: nowrap;
 }
 .filter-pill:hover {
@@ -1364,7 +1364,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
 }

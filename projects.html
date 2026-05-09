@@ -13,6 +13,29 @@
   <meta property="og:title" content="All Projects — Mamoor Ahmad">
   <meta property="og:description" content="31+ projects: AI agents, SaaS, climate tech, dev tools.">
   <meta property="og:url" content="https://mamoor123.github.io/projects.html">
+  <meta property="og:image" content="https://mamoor123.github.io/og-image.png">
+  <meta property="og:site_name" content="Mamoor Ahmad Portfolio">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Projects — Mamoor Ahmad">
+  <meta name="twitter:description" content="31+ projects: AI agents, SaaS, climate tech, dev tools.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "All Projects — Mamoor Ahmad",
+    "description": "31+ projects by Mamoor Ahmad: AI agents, SaaS, climate tech, dev tools.",
+    "url": "https://mamoor123.github.io/projects.html",
+    "author": {
+      "@type": "Person",
+      "name": "Mamoor Ahmad",
+      "url": "https://mamoor123.github.io"
+    }
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,7 +223,7 @@
           <span class="project-card--sm__icon" aria-hidden="true">${p.icon}</span>
           <span class="project-card--sm__status project-card--sm__status--${p.status}">${p.status === 'live' ? '● Live' : '◆ GitHub'}</span>
         </div>
-        <h3 class="project-card--sm__title">${p.name}</h3>
+        <h2 class="project-card--sm__title">${p.name}</h2>
         <p class="project-card--sm__desc">${p.desc}</p>
         <div class="project-card--sm__meta">
           <span class="project-card--sm__lang">
