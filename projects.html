@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects — Mamoor Ahmad | 31+ Projects</title>
+  <meta name="description" content="Browse all 31+ projects by Mamoor Ahmad — AI agents, SaaS platforms, climate tech, developer tools, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mamoor123.github.io/projects.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="All Projects — Mamoor Ahmad">
+  <meta property="og:description" content="31+ projects: AI agents, SaaS, climate tech, dev tools.">
+  <meta property="og:url" content="https://mamoor123.github.io/projects.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loader -->
+  <div class="loader-overlay" aria-hidden="true">
+    <div class="loader">
+      <div class="loader__logo">&lt;MA /&gt;</div>
+      <div class="loader__bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Mamoor Ahmad home">&lt;MA<span> /</span>&gt;</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="index.html#about" class="nav__link">About</a></li>
+        <li><a href="projects.html" class="nav__link active">Projects</a></li>
+        <li><a href="index.html#services" class="nav__link">Services</a></li>
+        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" aria-label="Switch to light mode">☀️</button>
+        <a href="index.html#contact" class="btn btn--primary btn--sm">Let's Talk</a>
+        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__overlay" aria-hidden="true"></div>
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="https://github.com/mamoor123" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main" class="projects-page">
+
+    <!-- Hero -->
+    <section class="projects-hero" aria-label="Projects overview">
+      <h1 class="projects-hero__title">All Projects</h1>
+      <p class="projects-hero__count">31 projects and counting...</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" role="search" aria-label="Filter projects">
+      <div class="filter-bar__inner">
+        <div class="filter-pills" role="tablist" aria-label="Project categories">
+          <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-pill" data-filter="ai" role="tab" aria-selected="false">AI & Agents</button>
+          <button class="filter-pill" data-filter="saas" role="tab" aria-selected="false">SaaS</button>
+          <button class="filter-pill" data-filter="climate" role="tab" aria-selected="false">Climate & ESG</button>
+          <button class="filter-pill" data-filter="devtools" role="tab" aria-selected="false">Dev Tools</button>
+          <button class="filter-pill" data-filter="other" role="tab" aria-selected="false">Other</button>
+        </div>
+        <div class="filter-search">
+          <span class="filter-search__icon" aria-hidden="true">🔍</span>
+          <input type="text" class="filter-search__input" placeholder="Search projects..." aria-label="Search projects">
+        </div>
+        <span class="filter-count" aria-live="polite">31 projects</span>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-page-grid" role="list" aria-label="Project list" id="projects-grid">
+      <!-- Populated by JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2025 Mamoor Ahmad. Built with ❤️ and lots of ☕</p>
+      <div class="footer__links">
+        <a href="https://github.com/mamoor123" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="agent.js" defer></script>
+
+  <!-- Projects Data & Filter Logic -->
+  <script>
+  (function() {
+    'use strict';
+
+    const projects = [
+      { id: 1, icon: '🐝', name: 'HiveOps', category: 'ai', lang: 'JavaScript', desc: 'AI-Powered Company Operating System — automate business operations through intelligent agents', stars: 9, url: 'https://github.com/mamoor123/hiveops', status: 'github' },
+      { id: 2, icon: '🌍', name: 'Planetary Pulse', category: 'climate', lang: 'JavaScript', desc: 'AI-Powered Earth Dashboard with Auth0, Gemini AI, Snowflake, Solana', stars: null, url: 'https://planetary-pulse.vercel.app', status: 'live' },
+      { id: 3, icon: '🧬', name: 'AgentDNA', category: 'ai', lang: 'Python', desc: 'DNS for AI Agents — Discovery, Trust & Marketplace', stars: null, url: 'https://github.com/mamoor123/agentdna', status: 'github' },
+      { id: 4, icon: '🤖', name: 'AgentForge', category: 'ai', lang: 'TypeScript', desc: 'AI Agent Marketplace — Discover, compare & deploy 1000+ AI agents across 22 categories', stars: null, url: 'https://github.com/mamoor123/agentforge', status: 'github' },
+      { id: 5, icon: '⚒️', name: 'ClawForge', category: 'devtools', lang: 'TypeScript', desc: 'Multi-Agent Dev Team on OpenClaw — autonomous development pipeline', stars: null, url: 'https://github.com/mamoor123/clawforge', status: 'github' },
+      { id: 6, icon: '🔥', name: 'LeadForge', category: 'saas', lang: 'TypeScript', desc: 'Signal-powered lead intelligence platform', stars: null, url: 'https://github.com/mamoor123/leadforge', status: 'github' },
+      { id: 7, icon: '🔒', name: 'AgenticSOC', category: 'ai', lang: 'Python', desc: 'AI-Powered Security Operations Agent', stars: null, url: 'https://github.com/mamoor123/agenticsoc', status: 'github' },
+      { id: 8, icon: '🌱', name: 'Carbon Fingerprint', category: 'climate', lang: 'HTML', desc: 'Climate identity powered by 144 years of NASA/NOAA data', stars: null, url: 'https://github.com/mamoor123/CARBON-FINGERPRINT', status: 'github' },
+      { id: 9, icon: '📊', name: 'ChartForge', category: 'devtools', lang: 'Python', desc: 'Publication-quality chart generator', stars: null, url: 'https://github.com/mamoor123/chartforge', status: 'github' },
+      { id: 10, icon: '🔗', name: 'ClawForge URL Shortener', category: 'devtools', lang: 'TypeScript', desc: 'URL shortener with click analytics', stars: null, url: 'https://github.com/mamoor123/clawforge-url-shortener', status: 'github' },
+      { id: 11, icon: '💀', name: 'Dead Serious', category: 'other', lang: 'JavaScript', desc: 'Enterprise-grade error messages for developers 😂', stars: 1, url: 'https://github.com/mamoor123/dead-serious', status: 'github' },
+      { id: 12, icon: '💬', name: 'DataWhisper', category: 'ai', lang: 'Python', desc: 'Chat With Your Data in plain English', stars: null, url: 'https://github.com/mamoor123/datawhisper', status: 'github' },
+      { id: 13, icon: '🛡️', name: 'ESG Shield', category: 'climate', lang: 'JavaScript', desc: 'One-Click ESG Reports for Shopify', stars: null, url: 'https://github.com/mamoor123/esg-shield', status: 'github' },
+      { id: 14, icon: '🕷️', name: 'Firecrawl OpenClaw Tool', category: 'devtools', lang: 'JavaScript', desc: 'Web scraping for OpenClaw', stars: null, url: 'https://github.com/mamoor123/firecrawl-openclaw-tool', status: 'github' },
+      { id: 15, icon: '🛡️', name: 'ForgeSquad', category: 'devtools', lang: 'TypeScript', desc: 'Multi-agent dev team orchestrator', stars: null, url: 'https://github.com/mamoor123/forgesquad', status: 'github' },
+      { id: 16, icon: '⚖️', name: 'GitCourt', category: 'ai', lang: 'Python', desc: 'Three AI agents debate your PR', stars: null, url: 'https://github.com/mamoor123/gitcourt', status: 'github' },
+      { id: 17, icon: '🌿', name: 'Green Profile', category: 'climate', lang: 'TypeScript', desc: 'Sustainability badge for Shopify', stars: null, url: 'https://github.com/mamoor123/green-profile', status: 'github' },
+      { id: 18, icon: '🎯', name: 'LinkedIn Recruiter Extension', category: 'ai', lang: 'JavaScript', desc: 'AI Chrome extension for recruiting', stars: null, url: 'https://github.com/mamoor123/LinkedIn-Recruiter-Extension', status: 'github' },
+      { id: 19, icon: '🤖', name: 'AI SDR Agent', category: 'ai', lang: 'TypeScript', desc: 'Autonomous Sales Development Rep', stars: null, url: 'https://github.com/mamoor123/ai-sdr-agent', status: 'github' },
+      { id: 20, icon: '🎧', name: 'AI Support Agent', category: 'ai', lang: 'Python/TS', desc: 'AI Customer Support Agent', stars: null, url: 'https://github.com/mamoor123/ai-support-agent', status: 'github' },
+      { id: 21, icon: '🔗', name: 'BioLink AI', category: 'saas', lang: 'TypeScript', desc: 'AI-powered Bio Link Builder', stars: null, url: 'https://github.com/mamoor123/biolink-ai', status: 'github' },
+      { id: 22, icon: '🌉', name: 'CBAM Bridge', category: 'climate', lang: 'Python', desc: 'EU Carbon compliance for exporters', stars: null, url: 'https://github.com/mamoor123/cbam-bridge', status: 'github' },
+      { id: 23, icon: '📝', name: 'EasyForm', category: 'saas', lang: 'TypeScript', desc: 'Modern form builder SaaS', stars: null, url: 'https://easyform-two.vercel.app', status: 'live' },
+      { id: 24, icon: '📈', name: 'My Trade SaaS', category: 'saas', lang: 'TypeScript', desc: 'Full-stack trading platform', stars: null, url: 'https://my-trade-saas.vercel.app', status: 'live' },
+      { id: 25, icon: '⭐', name: 'ReviewReply', category: 'saas', lang: 'JavaScript', desc: 'AI Google review reply tool', stars: null, url: 'https://github.com/mamoor123/reviewreply', status: 'github' },
+      { id: 26, icon: '📸', name: 'SnapPost', category: 'devtools', lang: 'CSS/HTML/JS', desc: 'Screenshot to social media post', stars: null, url: 'https://github.com/mamoor123/snap-post', status: 'github' },
+      { id: 27, icon: '🔍', name: 'ReverseSearch Engine', category: 'saas', lang: 'TypeScript', desc: 'Demand-driven marketplace', stars: null, url: 'https://github.com/mamoor123/ReverseSearch-Engine', status: 'github' },
+      { id: 28, icon: '🔎', name: 'ScreenSync', category: 'devtools', lang: 'JavaScript', desc: 'OFAC/EU/UN sanctions checker', stars: null, url: 'https://github.com/mamoor123/screensync-v1', status: 'github' },
+      { id: 29, icon: '📄', name: 'Proposal Generator', category: 'saas', lang: 'TypeScript', desc: 'Freelancer proposals → PDF → Stripe', stars: null, url: 'https://github.com/mamoor123/proposal-generator', status: 'github' },
+      { id: 30, icon: '🏷️', name: 'HS Code Classifier', category: 'saas', lang: 'JavaScript', desc: 'Instant HS code classification API', stars: null, url: 'https://github.com/mamoor123/hs-code-classifier', status: 'github' },
+      { id: 31, icon: '✨', name: 'AgentDNA Luxury Prototype', category: 'ai', lang: 'Python', desc: 'Luxury Concierge AI Prototype', stars: null, url: 'https://github.com/mamoor123/agentdna_luxury_prototype', status: 'github' }
+    ];
+
+    const langColors = {
+      'JavaScript': '#f1e05a',
+      'TypeScript': '#3178c6',
+      'Python': '#3572A5',
+      'HTML': '#e34c26',
+      'CSS/HTML/JS': '#563d7c',
+      'Python/TS': '#3572A5'
+    };
+
+    const categoryLabels = {
+      'ai': 'AI & Agents',
+      'saas': 'SaaS',
+      'climate': 'Climate',
+      'devtools': 'Dev Tools',
+      'other': 'Other'
+    };
+
+    const grid = document.getElementById('projects-grid');
+    const pills = document.querySelectorAll('.filter-pill');
+    const searchInput = document.querySelector('.filter-search__input');
+    const countEl = document.querySelector('.filter-count');
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    function createCard(p) {
+      const card = document.createElement('article');
+      card.className = 'project-card--sm';
+      card.setAttribute('role', 'listitem');
+      card.setAttribute('data-category', p.category);
+      card.innerHTML = `
+        <div class="project-card--sm__header">
+          <span class="project-card--sm__icon" aria-hidden="true">${p.icon}</span>
+          <span class="project-card--sm__status project-card--sm__status--${p.status}">${p.status === 'live' ? '● Live' : '◆ GitHub'}</span>
+        </div>
+        <h3 class="project-card--sm__title">${p.name}</h3>
+        <p class="project-card--sm__desc">${p.desc}</p>
+        <div class="project-card--sm__meta">
+          <span class="project-card--sm__lang">
+            <span class="project-card--sm__lang-dot" style="background:${langColors[p.lang] || '#888'}"></span>
+            ${p.lang}
+          </span>
+          ${p.stars ? `<span class="project-card--sm__stars">⭐ ${p.stars}</span>` : ''}
+        </div>
+        <div class="project-card--sm__tags">
+          <span class="tag">${categoryLabels[p.category]}</span>
+          <span class="tag">${p.lang}</span>
+        </div>
+        <div class="project-card--sm__footer">
+          <a href="${p.url}" class="project-card--sm__link" target="_blank" rel="noopener">
+            ${p.status === 'live' ? 'Live Demo' : 'View Code'} →
+          </a>
+          <span class="project-card--sm__category">${categoryLabels[p.category]}</span>
+        </div>
+      `;
+      return card;
+    }
+
+    function render() {
+      const filtered = projects.filter(p => {
+        const matchCategory = activeFilter === 'all' || p.category === activeFilter;
+        const matchSearch = !searchQuery ||
+          p.name.toLowerCase().includes(searchQuery) ||
+          p.desc.toLowerCase().includes(searchQuery) ||
+          p.lang.toLowerCase().includes(searchQuery) ||
+          categoryLabels[p.category].toLowerCase().includes(searchQuery);
+        return matchCategory && matchSearch;
+      });
+
+      grid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="no-results">
+            <div class="no-results__icon">🔍</div>
+            <p class="no-results__text">No projects found matching your criteria.</p>
+          </div>
+        `;
+      } else {
+        filtered.forEach(p => grid.appendChild(createCard(p)));
+      }
+
+      countEl.textContent = `${filtered.length} project${filtered.length !== 1 ? 's' : ''}`;
+
+      // GSAP animate new cards
+      if (typeof gsap !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.from('.project-card--sm', {
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: 'power2.out'
+        });
+      }
+    }
+
+    // Filter pills
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
+        pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
+        activeFilter = pill.getAttribute('data-filter');
+        render();
+      });
+    });
+
+    // Search
+    let searchTimeout;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        searchQuery = searchInput.value.toLowerCase().trim();
+        render();
+      }, 200);
+    });
+
+    // Keyboard shortcut: / to focus search
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+      if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+        render();
+        searchInput.blur();
+      }
+    });
+
+    // Initial render
+    render();
+  })();
+  </script>
+</body>
+</html>

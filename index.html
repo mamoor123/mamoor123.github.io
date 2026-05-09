@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mamoor Ahmad — AI & Full-Stack Developer | 31+ Projects Shipped</title>
+  <meta name="description" content="Mamoor Ahmad is an AI & Full-Stack Developer from Pakistan specializing in AI agent systems, SaaS platforms, Chrome extensions, and climate tech. 31+ projects shipped.">
+  <meta name="keywords" content="AI developer, full-stack developer, SaaS, AI agents, Chrome extensions, Pakistan, freelance developer">
+  <meta name="author" content="Mamoor Ahmad">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mamoor123.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mamoor Ahmad — AI & Full-Stack Developer">
+  <meta property="og:description" content="31+ projects shipped. Specializing in AI agents, SaaS, Chrome extensions, and climate tech.">
+  <meta property="og:url" content="https://mamoor123.github.io/">
+  <meta property="og:image" content="https://mamoor123.github.io/og-image.png">
+  <meta property="og:site_name" content="Mamoor Ahmad Portfolio">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mamoor Ahmad — AI & Full-Stack Developer">
+  <meta name="twitter:description" content="31+ projects shipped. AI agents, SaaS, Chrome extensions, climate tech.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mamoor Ahmad",
+    "jobTitle": "AI & Full-Stack Developer",
+    "url": "https://mamoor123.github.io",
+    "email": "mamoor.ahmed86@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+    "sameAs": [
+      "https://github.com/mamoor123",
+      "https://www.linkedin.com/in/mamoor-ahmad-4090a726a"
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Full-Stack Development", "SaaS", "Chrome Extensions", "Climate Tech"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loader -->
+  <div class="loader-overlay" aria-hidden="true">
+    <div class="loader">
+      <div class="loader__logo">&lt;MA /&gt;</div>
+      <div class="loader__bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Mamoor Ahmad home">&lt;MA<span> /</span>&gt;</a>
+
+      <ul class="nav__links">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" aria-label="Switch to light mode">☀️</button>
+        <a href="#contact" class="btn btn--primary btn--sm">Let's Talk</a>
+        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__overlay" aria-hidden="true"></div>
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="projects.html">All Projects</a>
+    <a href="https://github.com/mamoor123" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero__particles" aria-hidden="true">
+        <canvas id="particle-canvas"></canvas>
+      </div>
+      <div class="hero__content">
+        <p class="hero__greeting">Hi, my name is</p>
+        <h1 class="hero__name">Mamoor Ahmad.</h1>
+        <p class="hero__title">I build <span class="typed-text"></span></p>
+        <p class="hero__desc">
+          AI & Full-Stack Developer from Pakistan crafting intelligent agent systems,
+          scalable SaaS platforms, and innovative developer tools. 31+ projects shipped.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary btn--lg">View My Work</a>
+          <a href="https://wa.me/923279858009?text=Hi%20Mamoor!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." class="btn btn--outline btn--lg" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+          <a href="#contact" class="btn btn--ghost btn--lg">Contact</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-number" data-count="31" data-suffix="+">0</div>
+            <div class="hero__stat-label">Projects Shipped</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-number" data-count="2" data-suffix="+">0</div>
+            <div class="hero__stat-label">Years Experience</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-number" data-count="15" data-suffix="+">0</div>
+            <div class="hero__stat-label">AI Products</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-number" data-count="8" data-suffix="+">0</div>
+            <div class="hero__stat-label">SaaS Platforms</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about" aria-label="About me">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">About</p>
+          <h2 class="section__title">Building the future, one agent at a time.</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__image reveal-left">
+            <div class="about__image-frame">
+              <div class="about__image-placeholder" aria-label="Photo of Mamoor Ahmad">👨‍💻</div>
+            </div>
+            <!-- GitHub Contribution Graph -->
+            <div class="contrib-graph">
+              <div class="contrib-graph__title">GitHub Contributions</div>
+              <div class="contrib-graph__grid" role="img" aria-label="GitHub contribution activity graph"></div>
+            </div>
+          </div>
+          <div class="about__text reveal-right">
+            <p>
+              I'm <strong>Mamoor Ahmad</strong>, an AI & Full-Stack Developer from Pakistan
+              with a passion for building intelligent systems that solve real-world problems.
+              Over the past 2+ years, I've shipped <strong>31+ projects</strong> ranging from
+              AI agent platforms to climate tech dashboards.
+            </p>
+            <p>
+              My expertise spans the entire stack — from designing autonomous AI agent systems
+              and multi-agent orchestrators to building production-grade SaaS platforms with
+              modern payment integrations. I believe in shipping fast, iterating often, and
+              building tools that developers actually want to use.
+            </p>
+            <p>
+              Currently focused on <strong>AI agent ecosystems</strong>, <strong>developer tools</strong>,
+              and <strong>climate-conscious technology</strong>.
+            </p>
+
+            <div class="about__stats">
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="31">0</div>
+                <div class="about__stat-label">Projects</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="2">0</div>
+                <div class="about__stat-label">Years</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="15">0</div>
+                <div class="about__stat-label">AI Products</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="8">0</div>
+                <div class="about__stat-label">SaaS Apps</div>
+              </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+              <h3 class="tech-stack__title">Tech Stack</h3>
+              <div class="tech-stack__grid">
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="95"></div></div>
+                  <span class="tech-item__name">JavaScript</span>
+                  <span class="tech-item__pct">95%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="93"></div></div>
+                  <span class="tech-item__name">Tailwind CSS</span>
+                  <span class="tech-item__pct">93%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="92"></div></div>
+                  <span class="tech-item__name">TypeScript</span>
+                  <span class="tech-item__pct">92%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="92"></div></div>
+                  <span class="tech-item__name">REST APIs</span>
+                  <span class="tech-item__pct">92%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="90"></div></div>
+                  <span class="tech-item__name">Python</span>
+                  <span class="tech-item__pct">90%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="90"></div></div>
+                  <span class="tech-item__name">React</span>
+                  <span class="tech-item__pct">90%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="90"></div></div>
+                  <span class="tech-item__name">Vercel</span>
+                  <span class="tech-item__pct">90%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="90"></div></div>
+                  <span class="tech-item__name">Git/CI/CD</span>
+                  <span class="tech-item__pct">90%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="88"></div></div>
+                  <span class="tech-item__name">Next.js</span>
+                  <span class="tech-item__pct">88%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="85"></div></div>
+                  <span class="tech-item__name">Node.js</span>
+                  <span class="tech-item__pct">85%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="85"></div></div>
+                  <span class="tech-item__name">AI/LLMs</span>
+                  <span class="tech-item__pct">85%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="82"></div></div>
+                  <span class="tech-item__name">PostgreSQL</span>
+                  <span class="tech-item__pct">82%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="82"></div></div>
+                  <span class="tech-item__name">Data Viz</span>
+                  <span class="tech-item__pct">82%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="80"></div></div>
+                  <span class="tech-item__name">Chrome Ext</span>
+                  <span class="tech-item__pct">80%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="78"></div></div>
+                  <span class="tech-item__name">Stripe</span>
+                  <span class="tech-item__pct">78%</span>
+                </div>
+                <div class="tech-item">
+                  <div class="tech-item__bar"><div class="tech-item__bar-fill" data-width="70"></div></div>
+                  <span class="tech-item__name">Docker</span>
+                  <span class="tech-item__pct">70%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="section" id="projects" aria-label="Featured projects">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">Projects</p>
+          <h2 class="section__title">Featured Work</h2>
+          <p class="section__subtitle">A selection of projects I've built — from AI agent platforms to climate tech dashboards.</p>
+        </div>
+        <div class="projects-grid">
+
+          <!-- HiveOps -->
+          <article class="project-card reveal" aria-label="HiveOps project">
+            <div class="project-card__image" aria-hidden="true">🐝</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">HiveOps</h3>
+                <span class="project-card__stars">⭐ 9</span>
+              </div>
+              <p class="project-card__desc">AI-Powered Company Operating System — automate business operations through intelligent agents</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/mamoor123/hiveops" class="project-card__link" target="_blank" rel="noopener">
+                  View Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">AI Agents</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Planetary Pulse -->
+          <article class="project-card reveal" aria-label="Planetary Pulse project">
+            <div class="project-card__image" aria-hidden="true">🌍</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Planetary Pulse</h3>
+              </div>
+              <p class="project-card__desc">AI-Powered Earth Dashboard with Auth0, Gemini AI, Snowflake, Solana</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Gemini AI</span>
+                <span class="tag">Snowflake</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://planetary-pulse.vercel.app" class="project-card__link" target="_blank" rel="noopener">
+                  Live Demo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">Climate</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AgentDNA -->
+          <article class="project-card reveal" aria-label="AgentDNA project">
+            <div class="project-card__image" aria-hidden="true">🧬</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">AgentDNA</h3>
+              </div>
+              <p class="project-card__desc">DNS for AI Agents — Discovery, Trust & Marketplace</p>
+              <div class="project-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Marketplace</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/mamoor123/agentdna" class="project-card__link" target="_blank" rel="noopener">
+                  View Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">AI Agents</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AgentForge -->
+          <article class="project-card reveal" aria-label="AgentForge project">
+            <div class="project-card__image" aria-hidden="true">🤖</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">AgentForge</h3>
+              </div>
+              <p class="project-card__desc">AI Agent Marketplace — Discover, compare & deploy 1000+ AI agents across 22 categories</p>
+              <div class="project-card__tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">AI</span>
+                <span class="tag">Marketplace</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/mamoor123/agentforge" class="project-card__link" target="_blank" rel="noopener">
+                  View Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">AI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ClawForge -->
+          <article class="project-card reveal" aria-label="ClawForge project">
+            <div class="project-card__image" aria-hidden="true">⚒️</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">ClawForge</h3>
+              </div>
+              <p class="project-card__desc">Multi-Agent Dev Team on OpenClaw — autonomous development pipeline</p>
+              <div class="project-card__tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">Multi-Agent</span>
+                <span class="tag">DevOps</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/mamoor123/clawforge" class="project-card__link" target="_blank" rel="noopener">
+                  View Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">Dev Tools</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- LeadForge -->
+          <article class="project-card reveal" aria-label="LeadForge project">
+            <div class="project-card__image" aria-hidden="true">🔥</div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3 class="project-card__title">LeadForge</h3>
+              </div>
+              <p class="project-card__desc">Signal-powered lead intelligence platform</p>
+              <div class="project-card__tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">SaaS</span>
+                <span class="tag">Lead Gen</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/mamoor123/leadforge" class="project-card__link" target="_blank" rel="noopener">
+                  View Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <span class="project-card__category">SaaS</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="view-all reveal">
+          <a href="projects.html" class="view-all__link">
+            View All 31+ Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services" aria-label="Services">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">Services</p>
+          <h2 class="section__title">What I Can Build For You</h2>
+          <p class="section__subtitle">From AI agent systems to full-stack SaaS — I deliver production-ready solutions.</p>
+        </div>
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">🤖</div>
+            <h3 class="service-card__title">AI Agent Systems</h3>
+            <p class="service-card__price">from $2,000</p>
+            <p class="service-card__desc">Autonomous AI agents, multi-agent orchestrators, LLM integrations, and intelligent automation systems.</p>
+            <div class="service-card__tech">
+              <span class="tag">Python</span>
+              <span class="tag">A2A</span>
+              <span class="tag">MCP</span>
+              <span class="tag">OpenAI</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">🚀</div>
+            <h3 class="service-card__title">SaaS MVP Development</h3>
+            <p class="service-card__price">from $3,000</p>
+            <p class="service-card__desc">Full-stack SaaS platforms with auth, payments, dashboards, and deployment — from idea to production.</p>
+            <div class="service-card__tech">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Stripe</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">🔌</div>
+            <h3 class="service-card__title">Chrome Extensions & Integrations</h3>
+            <p class="service-card__price">from $1,500</p>
+            <p class="service-card__desc">Browser extensions, API integrations, web scrapers, and automation tools for your workflow.</p>
+            <div class="service-card__tech">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Chrome API</span>
+              <span class="tag">REST</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">📊</div>
+            <h3 class="service-card__title">Data & Visualization Tools</h3>
+            <p class="service-card__price">from $1,500</p>
+            <p class="service-card__desc">Interactive dashboards, chart generators, data pipelines, and analytics platforms.</p>
+            <div class="service-card__tech">
+              <span class="tag">Python</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">Chart.js</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">🌍</div>
+            <h3 class="service-card__title">Climate & ESG Solutions</h3>
+            <p class="service-card__price">from $2,000</p>
+            <p class="service-card__desc">Carbon footprint trackers, ESG reporting tools, sustainability dashboards, and compliance systems.</p>
+            <div class="service-card__tech">
+              <span class="tag">TypeScript</span>
+              <span class="tag">APIs</span>
+              <span class="tag">Shopify</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">⚡</div>
+            <h3 class="service-card__title">Custom Development</h3>
+            <p class="service-card__price">Let's discuss</p>
+            <p class="service-card__desc">Have something unique in mind? I'm open to custom projects, consulting, and long-term collaborations.</p>
+            <div class="service-card__tech">
+              <span class="tag">Any Stack</span>
+              <span class="tag">Flexible</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / TIMELINE ===== -->
+    <section class="section" id="experience" aria-label="Experience and milestones">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">Experience</p>
+          <h2 class="section__title">Milestones & Journey</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline__item reveal">
+            <div class="timeline__date">2025 — Present</div>
+            <h3 class="timeline__title">AI Agent Ecosystem Builder</h3>
+            <p class="timeline__org">Independent</p>
+            <p class="timeline__desc">Building next-gen AI agent platforms: HiveOps (Company OS), AgentDNA (Agent Discovery), AgentForge (Marketplace), and ClawForge (Multi-Agent Dev Team). Focused on autonomous agent orchestration and A2A protocols.</p>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__date">2024 — 2025</div>
+            <h3 class="timeline__title">SaaS & Developer Tools</h3>
+            <p class="timeline__org">Independent</p>
+            <p class="timeline__desc">Shipped 10+ SaaS platforms including LeadForge, EasyForm, BioLink AI, ReviewReply, and Proposal Generator. Built Chrome extensions, data viz tools, and full-stack applications with Stripe integration.</p>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__date">2024</div>
+            <h3 class="timeline__title">Climate Tech & ESG</h3>
+            <p class="timeline__org">Independent</p>
+            <p class="timeline__desc">Launched Planetary Pulse (AI Earth Dashboard), Carbon Fingerprint (144 years of NASA/NOAA data), ESG Shield (Shopify reports), Green Profile, and CBAM Bridge for EU carbon compliance.</p>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__date">2023 — 2024</div>
+            <h3 class="timeline__title">Foundation & Learning</h3>
+            <p class="timeline__org">Self-taught Developer</p>
+            <p class="timeline__desc">Started the development journey — learned JavaScript, TypeScript, Python, React, Next.js. Built first projects, contributed to open source, and developed a passion for AI and automation.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section" id="testimonials" aria-label="Testimonials">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">Testimonials</p>
+          <h2 class="section__title">What People Say</h2>
+        </div>
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card reveal">
+            <blockquote class="testimonial-card__quote">
+              "Mamoor delivered our AI agent platform ahead of schedule. His understanding of multi-agent systems is exceptional. The codebase was clean, well-documented, and production-ready."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">👤</div>
+              <div>
+                <div class="testimonial-card__name">Client Name</div>
+                <div class="testimonial-card__role">CTO, Tech Startup</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <blockquote class="testimonial-card__quote">
+              "Working with Mamoor was a great experience. He built our SaaS MVP from scratch in under 4 weeks — complete with Stripe payments, user auth, and a beautiful dashboard."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">👤</div>
+              <div>
+                <div class="testimonial-card__name">Client Name</div>
+                <div class="testimonial-card__role">Founder, SaaS Company</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <blockquote class="testimonial-card__quote">
+              "Highly recommend Mamoor for any AI or automation project. He's responsive, technically skilled, and genuinely cares about delivering quality work. Will hire again."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">👤</div>
+              <div>
+                <div class="testimonial-card__name">Client Name</div>
+                <div class="testimonial-card__role">Product Manager</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact" aria-label="Contact">
+      <div class="section__inner">
+        <div class="section__header reveal">
+          <p class="section__label">Contact</p>
+          <h2 class="section__title">Let's Work Together</h2>
+          <p class="section__subtitle">Have a project in mind? I'd love to hear about it. Let's build something amazing.</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info reveal-left">
+            <p class="contact__info-text">
+              I'm currently available for freelance work and interesting projects.
+              Whether you need an AI agent system, a SaaS MVP, or a custom tool —
+              let's talk about how I can help.
+            </p>
+            <div class="contact__links">
+              <a href="mailto:mamoor.ahmed86@gmail.com" class="contact__link">
+                <span class="contact__link-icon" aria-hidden="true">📧</span>
+                mamoor.ahmed86@gmail.com
+              </a>
+              <a href="https://wa.me/923279858009?text=Hi%20Mamoor!%20I%20saw%20your%20portfolio." class="contact__link" target="_blank" rel="noopener">
+                <span class="contact__link-icon" aria-hidden="true">💬</span>
+                +92 327 985 8009 (WhatsApp)
+              </a>
+              <a href="https://github.com/mamoor123" class="contact__link" target="_blank" rel="noopener">
+                <span class="contact__link-icon" aria-hidden="true">🐙</span>
+                github.com/mamoor123
+              </a>
+              <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" class="contact__link" target="_blank" rel="noopener">
+                <span class="contact__link-icon" aria-hidden="true">💼</span>
+                LinkedIn Profile
+              </a>
+            </div>
+            <div class="contact__social">
+              <a href="https://github.com/mamoor123" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+              <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
+              <a href="https://wa.me/923279858009" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+              <a href="mailto:mamoor.ahmed86@gmail.com" aria-label="Email">📧</a>
+            </div>
+          </div>
+          <form class="contact__form reveal-right" aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Project inquiry">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2025 Mamoor Ahmad. Built with ❤️ and lots of ☕</p>
+      <div class="footer__links">
+        <a href="https://github.com/mamoor123" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="projects.html">All Projects</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="agent.js" defer></script>
+</body>
+</html>
