@@ -48,17 +48,28 @@
   // Styles
   const styles = document.createElement('style');
   styles.textContent = `
-    .chatbot { position: fixed; bottom: 24px; right: 24px; z-index: 900; font-family: var(--font-body); }
+    .chatbot { position: fixed; bottom: 24px; right: 24px; z-index: 10001; font-family: var(--font-body); }
     .chatbot__trigger {
-      width: 56px; height: 56px; border-radius: 50%;
+      width: 60px; height: 60px; border-radius: 50%;
       background: var(--accent, #64ffda); color: var(--bg-primary, #0a192f);
       border: none; cursor: pointer; font-size: 1.5rem;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.4s ease;
       position: relative;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .chatbot__trigger.chatbot__trigger--visible {
+      opacity: 1;
+      pointer-events: auto;
+      animation: chatbotPulse 2s ease-in-out 3;
     }
     .chatbot__trigger:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(100, 255, 218, 0.4); }
+    @keyframes chatbotPulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3); }
+      50% { box-shadow: 0 4px 30px rgba(100, 255, 218, 0.6), 0 0 0 12px rgba(100, 255, 218, 0.1); }
+    }
     .chatbot__trigger-close { font-size: 1.25rem; }
     .chatbot__window {
       position: absolute; bottom: 72px; right: 0;
@@ -154,6 +165,11 @@
       30% { transform: translateY(-6px); opacity: 1; }
     }
     [data-theme="light"] .chatbot__window { box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+    [data-theme="light"] .chatbot__trigger { animation-name: chatbotPulseLight; }
+    @keyframes chatbotPulseLight {
+      0%, 100% { box-shadow: 0 4px 20px rgba(8, 145, 178, 0.3); }
+      50% { box-shadow: 0 4px 30px rgba(8, 145, 178, 0.6), 0 0 0 12px rgba(8, 145, 178, 0.1); }
+    }
     .chatbot__quick-btn--whatsapp {
       background: rgba(37, 211, 102, 0.15);
       color: #25d366;
@@ -192,6 +208,28 @@
   const quickBtns = chatbot.querySelectorAll('.chatbot__quick-btn');
 
   let isOpen = false;
+
+  // Show the trigger after the page loader finishes (avoid z-index clash)
+  function showTrigger() {
+    trigger.classList.add('chatbot__trigger--visible');
+  }
+  // Wait for the loader to finish, then show
+  const loaderEl = document.querySelector('.loader-overlay');
+  if (loaderEl && !loaderEl.classList.contains('hidden')) {
+    // Loader still visible — wait for it to finish
+    const observer = new MutationObserver(() => {
+      if (loaderEl.classList.contains('hidden')) {
+        observer.disconnect();
+        setTimeout(showTrigger, 600); // wait for CSS transition to finish
+      }
+    });
+    observer.observe(loaderEl, { attributes: true, attributeFilter: ['class'] });
+    // Failsafe: show after 4s no matter what
+    setTimeout(showTrigger, 4000);
+  } else {
+    // Loader already gone or missing
+    setTimeout(showTrigger, 300);
+  }
 
   function toggleChat(open) {
     isOpen = open;

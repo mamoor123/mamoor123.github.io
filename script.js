@@ -327,10 +327,23 @@
   /* --- Smooth Scroll for anchor links --- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (err) {
+          // Fallback for browsers without smooth scroll support
+          const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
+          const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+        // Update URL hash without jumping
+        if (history.pushState) {
+          history.pushState(null, '', href);
+        }
       }
     });
   });
@@ -365,8 +378,10 @@
     // Respect reduced motion
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    // Stagger cards
+    // Stagger cards — remove CSS .reveal class first so GSAP records
+    // the correct "to" values (opacity:1) instead of the .reveal initial (opacity:0)
     gsap.utils.toArray('.project-card, .service-card, .testimonial-card, .project-card--sm').forEach((card, i) => {
+      card.classList.remove('reveal', 'revealed', 'reveal-left', 'reveal-right');
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -381,8 +396,9 @@
       });
     });
 
-    // Section headers
+    // Section headers — same fix: strip CSS reveal so GSAP owns the animation
     gsap.utils.toArray('.section__header').forEach(header => {
+      header.classList.remove('reveal', 'revealed', 'reveal-left', 'reveal-right');
       gsap.from(header, {
         scrollTrigger: {
           trigger: header,
