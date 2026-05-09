@@ -45,13 +45,11 @@
   const mobileLinks = document.querySelectorAll('.nav__mobile a');
 
   // Scroll effect
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const st = window.scrollY;
     if (nav) {
       nav.classList.toggle('scrolled', st > 50);
     }
-    lastScroll = st;
   }, { passive: true });
 
   // Hamburger toggle

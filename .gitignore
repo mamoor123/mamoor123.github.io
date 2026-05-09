@@ -9,8 +9,19 @@ Thumbs.db
 *.swo
 *~
 
-# Dependencies (if any added later)
+# Dependencies
 node_modules/
+
+# Package manager
+package.json
+package-lock.json
+
+# Dev tools config
+eslint.config.mjs
+biome.json
 
 # Logs
 *.log
+
+# Temp files
+_inline_*.js
