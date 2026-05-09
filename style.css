@@ -785,8 +785,11 @@ body {
 .project-card__image::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 70%, var(--bg-card));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--bg-card));
 }
 .project-card__body {
   padding: 24px;
