@@ -8,7 +8,7 @@
   // Create widget HTML
   const widgetHTML = `
     <div id="ai-chatbot" class="chatbot" role="complementary" aria-label="AI Assistant">
-      <button class="chatbot__trigger" aria-label="Open AI assistant" title="Chat with AI">
+      <button type="button" class="chatbot__trigger" aria-label="Open AI assistant" title="Chat with AI">
         <span class="chatbot__trigger-icon">💬</span>
         <span class="chatbot__trigger-close" style="display:none">✕</span>
       </button>
@@ -21,7 +21,7 @@
               <div class="chatbot__status">Online • Ask me anything</div>
             </div>
           </div>
-          <button class="chatbot__close" aria-label="Close chat">✕</button>
+          <button type="button" class="chatbot__close" aria-label="Close chat">✕</button>
         </div>
         <div class="chatbot__messages" role="log" aria-live="polite">
           <div class="chatbot__msg chatbot__msg--bot">
@@ -31,10 +31,11 @@
           </div>
         </div>
         <div class="chatbot__quick-actions">
-          <button class="chatbot__quick-btn" data-query="What services do you offer?">Services</button>
-          <button class="chatbot__quick-btn" data-query="Show me your best projects">Projects</button>
-          <button class="chatbot__quick-btn" data-query="What are your rates?">Pricing</button>
-          <button class="chatbot__quick-btn" data-query="How can I contact you?">Contact</button>
+          <button type="button" class="chatbot__quick-btn" data-query="What services do you offer?">Services</button>
+          <button type="button" class="chatbot__quick-btn" data-query="Show me your best projects">Projects</button>
+          <button type="button" class="chatbot__quick-btn" data-query="What are your rates?">Pricing</button>
+          <button type="button" class="chatbot__quick-btn" data-query="How can I contact you?">Contact</button>
+          <button type="button" class="chatbot__quick-btn chatbot__quick-btn--whatsapp" data-query="whatsapp">💬 WhatsApp</button>
         </div>
         <form class="chatbot__input-area" aria-label="Send message">
           <input type="text" class="chatbot__input" placeholder="Ask about projects, services..." aria-label="Type your message" autocomplete="off">
@@ -153,6 +154,23 @@
       30% { transform: translateY(-6px); opacity: 1; }
     }
     [data-theme="light"] .chatbot__window { box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+    .chatbot__quick-btn--whatsapp {
+      background: rgba(37, 211, 102, 0.15);
+      color: #25d366;
+      border-color: rgba(37, 211, 102, 0.3);
+    }
+    .chatbot__quick-btn--whatsapp:hover {
+      background: rgba(37, 211, 102, 0.25);
+      border-color: #25d366;
+    }
+    .chatbot__msg-content a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .chatbot__msg-content a:hover {
+      opacity: 0.8;
+    }
   `;
   document.head.appendChild(styles);
 
@@ -194,17 +212,20 @@
 
     pricing: `Here's the pricing overview:\n\n🤖 AI Agent Systems — from $2,000\n💻 SaaS MVP — from $3,000\n🔌 Chrome Extensions — from $1,500\n📊 Data Tools — from $1,500\n🌍 Climate/ESG — from $2,000\n⚡ Custom — Let's discuss\n\nEvery project is scoped individually. Want a quote?`,
 
-    contact: `You can reach Mamoor through:\n\n📧 Email: mamoor.ahmed86@gmail.com\n💬 WhatsApp: +92 327 985 8009\n🔗 LinkedIn: /in/mamoor-ahmad\n🐙 GitHub: @mamoor123\n\nOr just fill out the contact form on this page!`,
+    contact: `You can reach Mamoor through:\n\n📧 <a href="mailto:mamoor.ahmed86@gmail.com" style="color:inherit">mamoor.ahmed86@gmail.com</a>\n💬 <a href="https://wa.me/923279858009" target="_blank" rel="noopener" style="color:inherit">+92 327 985 8009 (WhatsApp)</a>\n🔗 <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" target="_blank" rel="noopener" style="color:inherit">LinkedIn</a>\n🐙 <a href="https://github.com/mamoor123" target="_blank" rel="noopener" style="color:inherit">GitHub</a>\n\nOr just fill out the contact form on this page!`,
 
     default: `I can help with info about:\n\n• **Services** & pricing\n• **Projects** & tech stack\n• **Contact** details\n• Mamoor's experience\n\nWhat would you like to know?`,
 
     experience: `Mamoor Ahmad — AI & Full-Stack Developer from Pakistan 🇵🇰\n\n• 2+ years of experience\n• 31+ projects shipped\n• 15+ AI products built\n• 8+ SaaS platforms launched\n\nSpecializes in AI agents, SaaS, Chrome extensions, and climate tech.`,
 
-    tech: `Tech stack highlights:\n\n⚡ JavaScript (95%) • TypeScript (92%)\n🐍 Python (90%) • React (90%)\n▲ Next.js (88%) • Node.js (85%)\n🐘 PostgreSQL (82%) • Tailwind (93%)\n🤖 AI/LLMs (85%) • Docker (70%)\n🎨 Data Viz (82%) • Stripe (78%)`
+    tech: `Tech stack highlights:\n\n⚡ JavaScript (95%) • TypeScript (92%)\n🐍 Python (90%) • React (90%)\n▲ Next.js (88%) • Node.js (85%)\n🐘 PostgreSQL (82%) • Tailwind (93%)\n🤖 AI/LLMs (85%) • Docker (70%)\n🎨 Data Viz (82%) • Stripe (78%)`,
+
+    whatsapp: `Click below to chat with Mamoor on WhatsApp:\n\n💬 <a href="https://wa.me/923279858009?text=Hi%20Mamoor!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Open WhatsApp Chat →</a>\n\nOr call: +92 327 985 8009`
   };
 
   function getResponse(query) {
     const q = query.toLowerCase();
+    if (q === 'whatsapp') return responses.whatsapp;
     if (q.includes('service') || q.includes('offer') || q.includes('do you do')) return responses.services;
     if (q.includes('project') || q.includes('portfolio') || q.includes('work') || q.includes('built')) return responses.projects;
     if (q.includes('pric') || q.includes('rate') || q.includes('cost') || q.includes('how much') || q.includes('budget')) return responses.pricing;
