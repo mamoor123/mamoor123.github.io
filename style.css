@@ -786,7 +786,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, var(--bg-card));
+  background: linear-gradient(to bottom, transparent 70%, var(--bg-card));
 }
 .project-card__body {
   padding: 24px;
