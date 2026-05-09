@@ -148,8 +148,8 @@
 
   <!-- Scripts -->
   <!-- Scripts (cache-busted) -->
-  <script src="script.js?v=3" defer></script>
-  <script src="agent.js?v=3" defer></script>
+  <script src="script.js?v=4" defer></script>
+  <script src="agent.js?v=4" defer></script>
 
   <!-- Projects Data & Filter Logic -->
   <script>
@@ -157,37 +157,37 @@
     'use strict';
 
     const projects = [
-      { id: 1, icon: '🐝', name: 'HiveOps', category: 'ai', lang: 'JavaScript', desc: 'AI-Powered Company Operating System — automate business operations through intelligent agents', stars: 9, url: 'https://github.com/mamoor123/hiveops', status: 'github' },
-      { id: 2, icon: '🌍', name: 'Planetary Pulse', category: 'climate', lang: 'JavaScript', desc: 'AI-Powered Earth Dashboard with Auth0, Gemini AI, Snowflake, Solana', stars: null, url: 'https://planetary-pulse.vercel.app', status: 'live' },
-      { id: 3, icon: '🧬', name: 'AgentDNA', category: 'ai', lang: 'Python', desc: 'DNS for AI Agents — Discovery, Trust & Marketplace', stars: null, url: 'https://github.com/mamoor123/agentdna', status: 'github' },
-      { id: 4, icon: '🤖', name: 'AgentForge', category: 'ai', lang: 'TypeScript', desc: 'AI Agent Marketplace — Discover, compare & deploy 1000+ AI agents across 22 categories', stars: null, url: 'https://github.com/mamoor123/agentforge', status: 'github' },
-      { id: 5, icon: '⚒️', name: 'ClawForge', category: 'devtools', lang: 'TypeScript', desc: 'Multi-Agent Dev Team on OpenClaw — autonomous development pipeline', stars: null, url: 'https://github.com/mamoor123/clawforge', status: 'github' },
-      { id: 6, icon: '🔥', name: 'LeadForge', category: 'saas', lang: 'TypeScript', desc: 'Signal-powered lead intelligence platform', stars: null, url: 'https://github.com/mamoor123/leadforge', status: 'github' },
-      { id: 7, icon: '🔒', name: 'AgenticSOC', category: 'ai', lang: 'Python', desc: 'AI-Powered Security Operations Agent', stars: null, url: 'https://github.com/mamoor123/agenticsoc', status: 'github' },
-      { id: 8, icon: '🌱', name: 'Carbon Fingerprint', category: 'climate', lang: 'HTML', desc: 'Climate identity powered by 144 years of NASA/NOAA data', stars: null, url: 'https://github.com/mamoor123/CARBON-FINGERPRINT', status: 'github' },
-      { id: 9, icon: '📊', name: 'ChartForge', category: 'devtools', lang: 'Python', desc: 'Publication-quality chart generator', stars: null, url: 'https://github.com/mamoor123/chartforge', status: 'github' },
-      { id: 10, icon: '🔗', name: 'ClawForge URL Shortener', category: 'devtools', lang: 'TypeScript', desc: 'URL shortener with click analytics', stars: null, url: 'https://github.com/mamoor123/clawforge-url-shortener', status: 'github' },
-      { id: 11, icon: '💀', name: 'Dead Serious', category: 'other', lang: 'JavaScript', desc: 'Enterprise-grade error messages for developers 😂', stars: 1, url: 'https://github.com/mamoor123/dead-serious', status: 'github' },
-      { id: 12, icon: '💬', name: 'DataWhisper', category: 'ai', lang: 'Python', desc: 'Chat With Your Data in plain English', stars: null, url: 'https://github.com/mamoor123/datawhisper', status: 'github' },
-      { id: 13, icon: '🛡️', name: 'ESG Shield', category: 'climate', lang: 'JavaScript', desc: 'One-Click ESG Reports for Shopify', stars: null, url: 'https://github.com/mamoor123/esg-shield', status: 'github' },
-      { id: 14, icon: '🕷️', name: 'Firecrawl OpenClaw Tool', category: 'devtools', lang: 'JavaScript', desc: 'Web scraping for OpenClaw', stars: null, url: 'https://github.com/mamoor123/firecrawl-openclaw-tool', status: 'github' },
-      { id: 15, icon: '🛡️', name: 'ForgeSquad', category: 'devtools', lang: 'TypeScript', desc: 'Multi-agent dev team orchestrator', stars: null, url: 'https://github.com/mamoor123/forgesquad', status: 'github' },
-      { id: 16, icon: '⚖️', name: 'GitCourt', category: 'ai', lang: 'Python', desc: 'Three AI agents debate your PR', stars: null, url: 'https://github.com/mamoor123/gitcourt', status: 'github' },
-      { id: 17, icon: '🌿', name: 'Green Profile', category: 'climate', lang: 'TypeScript', desc: 'Sustainability badge for Shopify', stars: null, url: 'https://github.com/mamoor123/green-profile', status: 'github' },
-      { id: 18, icon: '🎯', name: 'LinkedIn Recruiter Extension', category: 'ai', lang: 'JavaScript', desc: 'AI Chrome extension for recruiting', stars: null, url: 'https://github.com/mamoor123/LinkedIn-Recruiter-Extension', status: 'github' },
-      { id: 19, icon: '🤖', name: 'AI SDR Agent', category: 'ai', lang: 'TypeScript', desc: 'Autonomous Sales Development Rep', stars: null, url: 'https://github.com/mamoor123/ai-sdr-agent', status: 'github' },
-      { id: 20, icon: '🎧', name: 'AI Support Agent', category: 'ai', lang: 'Python/TS', desc: 'AI Customer Support Agent', stars: null, url: 'https://github.com/mamoor123/ai-support-agent', status: 'github' },
-      { id: 21, icon: '🔗', name: 'BioLink AI', category: 'saas', lang: 'TypeScript', desc: 'AI-powered Bio Link Builder', stars: null, url: 'https://github.com/mamoor123/biolink-ai', status: 'github' },
-      { id: 22, icon: '🌉', name: 'CBAM Bridge', category: 'climate', lang: 'Python', desc: 'EU Carbon compliance for exporters', stars: null, url: 'https://github.com/mamoor123/cbam-bridge', status: 'github' },
-      { id: 23, icon: '📝', name: 'EasyForm', category: 'saas', lang: 'TypeScript', desc: 'Modern form builder SaaS', stars: null, url: 'https://easyform-two.vercel.app', status: 'live' },
-      { id: 24, icon: '📈', name: 'My Trade SaaS', category: 'saas', lang: 'TypeScript', desc: 'Full-stack trading platform', stars: null, url: 'https://my-trade-saas.vercel.app', status: 'live' },
-      { id: 25, icon: '⭐', name: 'ReviewReply', category: 'saas', lang: 'JavaScript', desc: 'AI Google review reply tool', stars: null, url: 'https://github.com/mamoor123/reviewreply', status: 'github' },
-      { id: 26, icon: '📸', name: 'SnapPost', category: 'devtools', lang: 'CSS/HTML/JS', desc: 'Screenshot to social media post', stars: null, url: 'https://github.com/mamoor123/snap-post', status: 'github' },
-      { id: 27, icon: '🔍', name: 'ReverseSearch Engine', category: 'saas', lang: 'TypeScript', desc: 'Demand-driven marketplace', stars: null, url: 'https://github.com/mamoor123/ReverseSearch-Engine', status: 'github' },
-      { id: 28, icon: '🔎', name: 'ScreenSync', category: 'devtools', lang: 'JavaScript', desc: 'OFAC/EU/UN sanctions checker', stars: null, url: 'https://github.com/mamoor123/screensync-v1', status: 'github' },
-      { id: 29, icon: '📄', name: 'Proposal Generator', category: 'saas', lang: 'TypeScript', desc: 'Freelancer proposals → PDF → Stripe', stars: null, url: 'https://github.com/mamoor123/proposal-generator', status: 'github' },
-      { id: 30, icon: '🏷️', name: 'HS Code Classifier', category: 'saas', lang: 'JavaScript', desc: 'Instant HS code classification API', stars: null, url: 'https://github.com/mamoor123/hs-code-classifier', status: 'github' },
-      { id: 31, icon: '✨', name: 'AgentDNA Luxury Prototype', category: 'ai', lang: 'Python', desc: 'Luxury Concierge AI Prototype', stars: null, url: 'https://github.com/mamoor123/agentdna_luxury_prototype', status: 'github' }
+      { id: 1, icon: '🐝', img: 'hiveops', name: 'HiveOps', category: 'ai', lang: 'JavaScript', desc: 'AI-Powered Company Operating System — automate business operations through intelligent agents', stars: 9, url: 'https://github.com/mamoor123/hiveops', status: 'github' },
+      { id: 2, icon: '🌍', img: 'planetary-pulse', name: 'Planetary Pulse', category: 'climate', lang: 'JavaScript', desc: 'AI-Powered Earth Dashboard with Auth0, Gemini AI, Snowflake, Solana', stars: null, url: 'https://planetary-pulse.vercel.app', status: 'live' },
+      { id: 3, icon: '🧬', img: 'agentdna', name: 'AgentDNA', category: 'ai', lang: 'Python', desc: 'DNS for AI Agents — Discovery, Trust & Marketplace', stars: null, url: 'https://github.com/mamoor123/agentdna', status: 'github' },
+      { id: 4, icon: '🤖', img: 'agentforge', name: 'AgentForge', category: 'ai', lang: 'TypeScript', desc: 'AI Agent Marketplace — Discover, compare & deploy 1000+ AI agents across 22 categories', stars: null, url: 'https://github.com/mamoor123/agentforge', status: 'github' },
+      { id: 5, icon: '⚒️', img: 'clawforge', name: 'ClawForge', category: 'devtools', lang: 'TypeScript', desc: 'Multi-Agent Dev Team on OpenClaw — autonomous development pipeline', stars: null, url: 'https://github.com/mamoor123/clawforge', status: 'github' },
+      { id: 6, icon: '🔥', img: 'leadforge', name: 'LeadForge', category: 'saas', lang: 'TypeScript', desc: 'Signal-powered lead intelligence platform', stars: null, url: 'https://github.com/mamoor123/leadforge', status: 'github' },
+      { id: 7, icon: '🔒', img: 'agenticsoc', name: 'AgenticSOC', category: 'ai', lang: 'Python', desc: 'AI-Powered Security Operations Agent', stars: null, url: 'https://github.com/mamoor123/agenticsoc', status: 'github' },
+      { id: 8, icon: '🌱', img: 'carbon-fingerprint', name: 'Carbon Fingerprint', category: 'climate', lang: 'HTML', desc: 'Climate identity powered by 144 years of NASA/NOAA data', stars: null, url: 'https://github.com/mamoor123/CARBON-FINGERPRINT', status: 'github' },
+      { id: 9, icon: '📊', img: 'chartforge', name: 'ChartForge', category: 'devtools', lang: 'Python', desc: 'Publication-quality chart generator', stars: null, url: 'https://github.com/mamoor123/chartforge', status: 'github' },
+      { id: 10, icon: '🔗', img: 'url-shortener', name: 'ClawForge URL Shortener', category: 'devtools', lang: 'TypeScript', desc: 'URL shortener with click analytics', stars: null, url: 'https://github.com/mamoor123/clawforge-url-shortener', status: 'github' },
+      { id: 11, icon: '💀', img: 'dead-serious', name: 'Dead Serious', category: 'other', lang: 'JavaScript', desc: 'Enterprise-grade error messages for developers 😂', stars: 1, url: 'https://github.com/mamoor123/dead-serious', status: 'github' },
+      { id: 12, icon: '💬', img: 'datawhisper', name: 'DataWhisper', category: 'ai', lang: 'Python', desc: 'Chat With Your Data in plain English', stars: null, url: 'https://github.com/mamoor123/datawhisper', status: 'github' },
+      { id: 13, icon: '🛡️', img: 'esg-shield', name: 'ESG Shield', category: 'climate', lang: 'JavaScript', desc: 'One-Click ESG Reports for Shopify', stars: null, url: 'https://github.com/mamoor123/esg-shield', status: 'github' },
+      { id: 14, icon: '🕷️', img: 'firecrawl', name: 'Firecrawl OpenClaw Tool', category: 'devtools', lang: 'JavaScript', desc: 'Web scraping for OpenClaw', stars: null, url: 'https://github.com/mamoor123/firecrawl-openclaw-tool', status: 'github' },
+      { id: 15, icon: '🛡️', img: 'forgesquad', name: 'ForgeSquad', category: 'devtools', lang: 'TypeScript', desc: 'Multi-agent dev team orchestrator', stars: null, url: 'https://github.com/mamoor123/forgesquad', status: 'github' },
+      { id: 16, icon: '⚖️', img: 'gitcourt', name: 'GitCourt', category: 'ai', lang: 'Python', desc: 'Three AI agents debate your PR', stars: null, url: 'https://github.com/mamoor123/gitcourt', status: 'github' },
+      { id: 17, icon: '🌿', img: 'green-profile', name: 'Green Profile', category: 'climate', lang: 'TypeScript', desc: 'Sustainability badge for Shopify', stars: null, url: 'https://github.com/mamoor123/green-profile', status: 'github' },
+      { id: 18, icon: '🎯', img: 'linkedin-recruiter', name: 'LinkedIn Recruiter Extension', category: 'ai', lang: 'JavaScript', desc: 'AI Chrome extension for recruiting', stars: null, url: 'https://github.com/mamoor123/LinkedIn-Recruiter-Extension', status: 'github' },
+      { id: 19, icon: '🤖', img: 'ai-sdr', name: 'AI SDR Agent', category: 'ai', lang: 'TypeScript', desc: 'Autonomous Sales Development Rep', stars: null, url: 'https://github.com/mamoor123/ai-sdr-agent', status: 'github' },
+      { id: 20, icon: '🎧', img: 'ai-support', name: 'AI Support Agent', category: 'ai', lang: 'Python/TS', desc: 'AI Customer Support Agent', stars: null, url: 'https://github.com/mamoor123/ai-support-agent', status: 'github' },
+      { id: 21, icon: '🔗', img: 'biolink', name: 'BioLink AI', category: 'saas', lang: 'TypeScript', desc: 'AI-powered Bio Link Builder', stars: null, url: 'https://github.com/mamoor123/biolink-ai', status: 'github' },
+      { id: 22, icon: '🌉', img: 'cbam-bridge', name: 'CBAM Bridge', category: 'climate', lang: 'Python', desc: 'EU Carbon compliance for exporters', stars: null, url: 'https://github.com/mamoor123/cbam-bridge', status: 'github' },
+      { id: 23, icon: '📝', img: 'easyform', name: 'EasyForm', category: 'saas', lang: 'TypeScript', desc: 'Modern form builder SaaS', stars: null, url: 'https://easyform-two.vercel.app', status: 'live' },
+      { id: 24, icon: '📈', img: 'my-trade', name: 'My Trade SaaS', category: 'saas', lang: 'TypeScript', desc: 'Full-stack trading platform', stars: null, url: 'https://my-trade-saas.vercel.app', status: 'live' },
+      { id: 25, icon: '⭐', img: 'reviewreply', name: 'ReviewReply', category: 'saas', lang: 'JavaScript', desc: 'AI Google review reply tool', stars: null, url: 'https://github.com/mamoor123/reviewreply', status: 'github' },
+      { id: 26, icon: '📸', img: 'snappost', name: 'SnapPost', category: 'devtools', lang: 'CSS/HTML/JS', desc: 'Screenshot to social media post', stars: null, url: 'https://github.com/mamoor123/snap-post', status: 'github' },
+      { id: 27, icon: '🔍', img: 'reversesearch', name: 'ReverseSearch Engine', category: 'saas', lang: 'TypeScript', desc: 'Demand-driven marketplace', stars: null, url: 'https://github.com/mamoor123/ReverseSearch-Engine', status: 'github' },
+      { id: 28, icon: '🔎', img: 'screensync', name: 'ScreenSync', category: 'devtools', lang: 'JavaScript', desc: 'OFAC/EU/UN sanctions checker', stars: null, url: 'https://github.com/mamoor123/screensync-v1', status: 'github' },
+      { id: 29, icon: '📄', img: 'proposal-gen', name: 'Proposal Generator', category: 'saas', lang: 'TypeScript', desc: 'Freelancer proposals → PDF → Stripe', stars: null, url: 'https://github.com/mamoor123/proposal-generator', status: 'github' },
+      { id: 30, icon: '🏷️', img: 'hs-code', name: 'HS Code Classifier', category: 'saas', lang: 'JavaScript', desc: 'Instant HS code classification API', stars: null, url: 'https://github.com/mamoor123/hs-code-classifier', status: 'github' },
+      { id: 31, icon: '✨', img: 'agentdna-luxury', name: 'AgentDNA Luxury Prototype', category: 'ai', lang: 'Python', desc: 'Luxury Concierge AI Prototype', stars: null, url: 'https://github.com/mamoor123/agentdna_luxury_prototype', status: 'github' }
     ];
 
     const langColors = {
@@ -220,28 +220,33 @@
       card.setAttribute('role', 'listitem');
       card.setAttribute('data-category', p.category);
       card.innerHTML = `
-        <div class="project-card--sm__header">
-          <span class="project-card--sm__icon" aria-hidden="true">${p.icon}</span>
-          <span class="project-card--sm__status project-card--sm__status--${p.status}">${p.status === 'live' ? '● Live' : '◆ GitHub'}</span>
+        <div class="project-card--sm__preview">
+          <img src="images/projects/${p.img}.png" alt="${p.name} preview" loading="lazy">
         </div>
-        <h2 class="project-card--sm__title">${p.name}</h2>
-        <p class="project-card--sm__desc">${p.desc}</p>
-        <div class="project-card--sm__meta">
-          <span class="project-card--sm__lang">
-            <span class="project-card--sm__lang-dot" style="background:${langColors[p.lang] || '#888'}"></span>
-            ${p.lang}
-          </span>
-          ${p.stars ? `<span class="project-card--sm__stars">⭐ ${p.stars}</span>` : ''}
-        </div>
-        <div class="project-card--sm__tags">
-          <span class="tag">${categoryLabels[p.category]}</span>
-          <span class="tag">${p.lang}</span>
-        </div>
-        <div class="project-card--sm__footer">
-          <a href="${p.url}" class="project-card--sm__link" target="_blank" rel="noopener">
-            ${p.status === 'live' ? 'Live Demo' : 'View Code'} →
-          </a>
-          <span class="project-card--sm__category">${categoryLabels[p.category]}</span>
+        <div class="project-card--sm__body">
+          <div class="project-card--sm__header">
+            <span class="project-card--sm__icon" aria-hidden="true">${p.icon}</span>
+            <span class="project-card--sm__status project-card--sm__status--${p.status}">${p.status === 'live' ? '● Live' : '◆ GitHub'}</span>
+          </div>
+          <h2 class="project-card--sm__title">${p.name}</h2>
+          <p class="project-card--sm__desc">${p.desc}</p>
+          <div class="project-card--sm__meta">
+            <span class="project-card--sm__lang">
+              <span class="project-card--sm__lang-dot" style="background:${langColors[p.lang] || '#888'}"></span>
+              ${p.lang}
+            </span>
+            ${p.stars ? `<span class="project-card--sm__stars">⭐ ${p.stars}</span>` : ''}
+          </div>
+          <div class="project-card--sm__tags">
+            <span class="tag">${categoryLabels[p.category]}</span>
+            <span class="tag">${p.lang}</span>
+          </div>
+          <div class="project-card--sm__footer">
+            <a href="${p.url}" class="project-card--sm__link" target="_blank" rel="noopener">
+              ${p.status === 'live' ? 'Live Demo' : 'View Code'} →
+            </a>
+            <span class="project-card--sm__category">${categoryLabels[p.category]}</span>
+          </div>
         </div>
       `;
       return card;
