@@ -115,7 +115,7 @@
       background: var(--accent-dim, rgba(100,255,218,0.08));
       color: var(--accent, #64ffda); border: 1px solid var(--border, #233554);
       border-radius: 100px; padding: 4px 12px; cursor: pointer;
-      transition: all 0.15s ease;
+      transition: border-color 0.15s ease, background 0.15s ease;
     }
     .chatbot__quick-btn:hover {
       border-color: var(--accent, #64ffda); background: rgba(100,255,218,0.15);
@@ -211,6 +211,9 @@
     if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('whatsapp') || q.includes('hire')) return responses.contact;
     if (q.includes('experience') || q.includes('about') || q.includes('who')) return responses.experience;
     if (q.includes('tech') || q.includes('stack') || q.includes('skill') || q.includes('language')) return responses.tech;
+    if (q.match(/\b(hi|hello|hey|howdy|sup|yo)\b/)) return `Hey there! 👋 Welcome to Mamoor's portfolio. I can help you with:\n\n• **Services** & pricing\n• **Projects** & tech stack\n• **Contact** details\n\nWhat would you like to know?`;
+    if (q.match(/\b(thanks|thank you|thx|cheers)\b/)) return `You're welcome! 😊 Let me know if you have any other questions. Feel free to reach out to Mamoor directly via WhatsApp or email!`;
+    if (q.match(/\b(bye|goodbye|see you|later)\b/)) return `Goodbye! 👋 Thanks for visiting. Don't hesitate to reach out if you need anything. Good luck with your project!`;
     return responses.default;
   }
 

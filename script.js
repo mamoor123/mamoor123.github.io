@@ -177,6 +177,9 @@
     function draw() {
       ctx.clearRect(0, 0, w, h);
 
+      const isDark = root.getAttribute('data-theme') !== 'light';
+      const baseColor = isDark ? '100, 255, 218' : '8, 145, 178';
+
       // Update & draw particles
       particles.forEach(p => {
         p.x += p.vx;
@@ -186,7 +189,6 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        const isDark = root.getAttribute('data-theme') !== 'light';
         ctx.fillStyle = isDark ? 'rgba(100, 255, 218, 0.6)' : 'rgba(8, 145, 178, 0.5)';
         ctx.fill();
       });
@@ -196,16 +198,14 @@
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < CONNECT_DIST) {
+          const distSq = dx * dx + dy * dy;
+          if (distSq < CONNECT_DIST * CONNECT_DIST) {
+            const dist = Math.sqrt(distSq);
             const alpha = (1 - dist / CONNECT_DIST) * 0.3;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            const isDark = root.getAttribute('data-theme') !== 'light';
-            ctx.strokeStyle = isDark
-              ? `rgba(100, 255, 218, ${alpha})`
-              : `rgba(8, 145, 178, ${alpha})`;
+            ctx.strokeStyle = `rgba(${baseColor}, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
