@@ -75,6 +75,14 @@
     link.addEventListener('click', () => toggleMobile(false));
   });
 
+  // Close mobile menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+      toggleMobile(false);
+      if (hamburger) hamburger.focus();
+    }
+  });
+
   /* --- Custom Cursor --- */
   const cursorDot = document.querySelector('.cursor-dot');
   if (cursorDot && window.matchMedia('(hover: hover)').matches) {

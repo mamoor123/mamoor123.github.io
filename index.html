@@ -85,9 +85,9 @@
       </ul>
 
       <div class="nav__actions">
-        <button class="theme-toggle" aria-label="Switch to light mode">☀️</button>
+        <button type="button" class="theme-toggle" aria-label="Switch to light mode">☀️</button>
         <a href="#contact" class="btn btn--primary btn--sm">Let's Talk</a>
-        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <button type="button" class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -682,16 +682,16 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Name</label>
-                <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                <input type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" required>
               </div>
               <div class="form-group">
                 <label for="contact-email">Email</label>
-                <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="contact-email" name="email" placeholder="you@example.com" autocomplete="email" required>
               </div>
             </div>
             <div class="form-group">
               <label for="contact-subject">Subject</label>
-              <input type="text" id="contact-subject" name="subject" placeholder="Project inquiry">
+              <input type="text" id="contact-subject" name="subject" placeholder="Project inquiry" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="contact-message">Message</label>
