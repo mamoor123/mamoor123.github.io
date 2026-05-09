@@ -242,6 +242,24 @@
   trigger.addEventListener('click', () => toggleChat(!isOpen));
   closeBtn.addEventListener('click', () => toggleChat(false));
 
+  // Auto-open chat window after trigger becomes visible
+  function autoOpen() {
+    setTimeout(() => toggleChat(true), 800);
+  }
+  // Chain auto-open after the trigger show logic
+  if (loaderEl && !loaderEl.classList.contains('hidden')) {
+    const autoObserver = new MutationObserver(() => {
+      if (loaderEl.classList.contains('hidden')) {
+        autoObserver.disconnect();
+        setTimeout(autoOpen, 600);
+      }
+    });
+    autoObserver.observe(loaderEl, { attributes: true, attributeFilter: ['class'] });
+    setTimeout(autoOpen, 4500); // failsafe
+  } else {
+    setTimeout(autoOpen, 1100);
+  }
+
   // Knowledge base for responses
   const responses = {
     services: `Mamoor offers 6 core services:\n\n🤖 **AI Agent Systems** — from $2,000\nSaaS MVP Development — from $3,000\n🔌 Chrome Extensions — from $1,500\n📊 Data & Viz Tools — from $1,500\n🌍 Climate & ESG — from $2,000\n⚡ Custom Dev — Let's discuss\n\nWant details on any specific service?`,
